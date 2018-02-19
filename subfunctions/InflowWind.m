@@ -135,8 +135,9 @@ if Wind.Type == 4 || Wind.Type == 5 || Wind.Type == 6 || Wind.Type == 8
     
     % Turbulence seed
     rng('shuffle')
-    seed = randi([-2147483648, 2147483647]);
-    
+    % seed = randi([-2147483648, 2147483647]);
+    seed = 439584340;
+	
     % Write TurbSim input file
     fid = fopen('subfunctions\inputfiles\wind.inp', 'wt');
     fprintf(fid, 'TurbSim Input File. Valid for TurbSim v1.06.00, 21-Sep-2012\n');

@@ -473,6 +473,7 @@ load(handles.LinModel)
 disp('Setting controller parameters...')
 assignin('base', 'Drivetrain', Drivetrain)
 assignin('base', 'Control', Control)
+assignin('base', 'Blade', Blade)
 ControllerDesign(Control);
 
 % Turbine input files

@@ -292,11 +292,11 @@ for j = 1:length(WindSpeeds)
     end
     sysm{j} = ss(A, B, C, D, 'InputName', data.u_desc,'Outputname', data.y_desc, 'StateName', data.x_desc);
     
-    Lin.V(j) = data.y_op{1};
-    Lin.Torque(j) = data.y_op{5};
-    Lin.Pitch(j) =  data.y_op{34}*pi/180;
-    Lin.GSpeed(j) = data.y_op{33}*pi/30;
-    Lin.RSpeed(j) = data.y_op{38}*pi/30;
+    Lin.V(j) = data.y_op{find(contains(data.y_desc,'Wind1VelX'))};
+    Lin.Torque(j) = data.y_op{find(contains(data.y_desc,'SrvD GenTq'))};
+    Lin.Pitch(j) =  data.y_op{find(contains(data.y_desc,'ED BlPitch1'))}*pi/180;
+    Lin.GSpeed(j) = data.y_op{find(contains(data.y_desc,'ED GenSpeed'))}*pi/30;
+    Lin.RSpeed(j) = data.y_op{find(contains(data.y_desc,'ED RotSpeed'))}*pi/30;
 end
 
 % Reset the gearbox efficiency
