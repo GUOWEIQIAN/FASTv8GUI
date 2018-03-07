@@ -32,7 +32,7 @@ fprintf(fid, 'True          FlapDOF1    - First flapwise blade mode DOF (flag)\n
 fprintf(fid, 'True          FlapDOF2    - Second flapwise blade mode DOF (flag)\n');
 fprintf(fid, 'True          EdgeDOF     - First edgewise blade mode DOF (flag)\n');
 fprintf(fid, 'False         TeetDOF     - Rotor-teeter DOF (flag) [unused for 3 blades]\n');
-fprintf(fid, 'True          DrTrDOF     - Drivetrain rotational-flexibility DOF (flag)\n');
+fprintf(fid, 'False         DrTrDOF     - Drivetrain rotational-flexibility DOF (flag)\n');
 fprintf(fid, '%s          GenDOF      - Generator DOF (flag)\n', GenDOF);
 fprintf(fid, '%s          YawDOF      - Yaw DOF (flag)\n', YawDOF);
 fprintf(fid, 'True          TwFADOF1    - First fore-aft tower bending-mode DOF (flag)\n');
